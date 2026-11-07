@@ -5,8 +5,8 @@ export const POLL_INTERVAL_MS = 5000;
 /** The longest the page waits between two asks when the server pushes back. */
 export const MAX_BACKOFF_MS = 30_000;
 /**
- * The longest wait the page accepts from `Retry-After`. Core's limit counts a
- * minute (`base/services/rateLimit.ts`), so a longer wait is a mistake of a proxy.
+ * The longest wait the page accepts from `Retry-After`, which only a proxy in
+ * front of the store sends: a longer wait is treated as a mistake.
  */
 export const MAX_RETRY_AFTER_MS = 60_000;
 
